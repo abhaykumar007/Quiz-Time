@@ -35,6 +35,13 @@ body {
   background-color: #008583;
   border-radius: 50px;
 }
+
+.container .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 8vw;
+  /* grid-template-rows: 1fr 1fr; */
+}
 .container .options button {
   color: black;
   width: 15vw;
@@ -43,12 +50,27 @@ body {
   padding-top: 2vh;
   padding-bottom: 2vh;
   background-color: #5e7881;
+  transition: all 0.2s ease-in-out;
 }
-.container .options .a,
+.container .options button:hover {
+  transform: scale(1.05);
+  background-color: #9ec4d1;
+}
+.container .options button:disabled {
+  background-color: #9ec4d1;
+}
+.container .options .green {
+  background-color: green;
+}
+.container .options .red {
+  background-color: red;
+}
+
+/*.container .options .a,
 .container .options .c {
   margin-right: 2vw;
-  /* #F1860A */
-}
+   #F1860A 
+} */
 .container .navigate {
   display: flex;
   justify-content: space-around;
@@ -80,11 +102,4 @@ body {
   margin-left: 10px;
   margin-top: 10px;
   border-radius: 10px;
-}
-
-.container .options button:enabled {
-  /* background-color: rgb(23, 182, 23); */
-}
-.container .options button:disabled {
-  background-color: #9ec4d1;
 }

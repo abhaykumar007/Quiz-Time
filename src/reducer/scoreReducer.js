@@ -7,14 +7,10 @@ const intial = {
 const scoreReducer = (state = intial, action) => {
   switch (action.type) {
     case INCREMENTSCORE: {
-      if (action.payload) {
-        return { score: state.score + 4 };
-      }
+      return { score: state.score + 4 };
     }
     case DECREMENTSCORE: {
-      if (!action.payload) {
-        return { score: state.score - 1 };
-      }
+      return { score: state.score - 1 };
     }
     default: {
       return state;
