@@ -22,18 +22,18 @@ export default function Main() {
 
   return (
     <div className="container">
-      {ref < 3 ? (
+      {ref < 4 ? (
         <div>
           <div className="question">{questions[ref].questionText}</div>
           <div className="options">
             {questions[ref].answerOptions.map((element, i) => {
-              // console.log(i);
               return (
                 <button
                   disabled={flag}
                   onClick={() => {
                     handelClick(element.isCorrect);
                   }}
+                  key={i}
                 >
                   {element.answerText}
                 </button>
